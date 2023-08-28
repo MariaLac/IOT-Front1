@@ -12,6 +12,9 @@
         justify-content: center;
         display: flex;
         min-height: 100vh;
+        background-image: url('/images/iot_image.jpeg'); 
+        background-size: cover;
+        background-repeat: no-repeat;
        
 }
 
