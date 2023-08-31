@@ -10,7 +10,7 @@ export default function NavbarLogin(){
             <ul className={styles.link_items}>
                 <li>
                     <Link href="/">
-                        Sair
+                            Sair
                     </Link>
                 </li>
             </ul>

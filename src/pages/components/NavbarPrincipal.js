@@ -2,14 +2,16 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserGear } from "@fortawesome/free-solid-svg-icons";
 import styles from '../../styles/NavbarPrincipal.module.css';
+import Modal from "./modal";
+import tela_principal from "../tela_principal";
 
-export default function NavbarPrincipal() {
+export default function NavbarPrincipal({ onOpenModal }) {
     return (
 
         <nav className={styles.navbar}>
             <ul className={styles.link_items}>
                 <li className={`${styles.dropdown} ${styles.spaceRight}`}>
-                    <span>☰</span> {/* Ícone de três traços */}
+                    <span>☰</span> 
                     <ul className={styles.dropdownContent}>
                        <li>
                         <h2 className={styles.lh2}>Broker</h2>
@@ -51,9 +53,9 @@ export default function NavbarPrincipal() {
                     <h1>IOT</h1>
                 </li>
                 <li className={styles.spaceLeft}>
-                    <Link href="/">
-                        Sair
-                    </Link>
+                    <button onClick={onOpenModal}>
+                         Sair
+                    </button>
                 </li>
                 <li>
                   <Link href="/broker/atualizarDados">
