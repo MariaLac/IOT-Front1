@@ -8,19 +8,14 @@ export default function Navbar(){
           <h1>IOT</h1>
         </div>
       <ul className={styles.link_items}>
-        <li>
-        <Link href="/">
-          Home
+      <li>
+        <Link href="/cadastro">
+          Cadastre-se  
           </Link>
       </li>
       <li>
         <Link href="/login">
            Login
-          </Link>
-      </li>
-      <li>
-        <Link href="/cadastro">
-          Cadastro  
           </Link>
       </li>
     </ul>

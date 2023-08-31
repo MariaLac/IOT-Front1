@@ -1,17 +1,17 @@
-import * as Styled from './styles'
+import * as Styled from "./styles";
 
-export const DropMenu = () => {
-    return(
-        <Styled.Wrapper>
-  <div className="dropdown">
-  <button className="dropbtn">Dropdown</button>
-  <div className="dropdown-content">
-  <a href="#">Link 1</a>
-  <a href="#">Link 2</a>
-  <a href="#">Link 3</a>
-  </div>
-</div>
+type Props = {
+  title: string;
+  children: React.ReactNode;
+};
 
-        </Styled.Wrapper>
-    )
-}
+export const DropMenu = ({ title, children }: Props) => {
+  return (
+    <Styled.Wrapper>
+      <div className="dropdown">
+        <button className="dropbtn">{title}</button>
+        <div className="dropdown-content">{children}</div>
+      </div>
+    </Styled.Wrapper>
+  );
+};

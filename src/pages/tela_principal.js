@@ -1,6 +1,6 @@
 import Head from "next/head"
 import NavbarPrincipal from "./components/NavbarPrincipal"
-import {DropMenu} from '../common/dropmenu/index'
+import {DropMenu} from "../common/dropmenu"
 
 export default function tela_principal(){
     return(
@@ -9,8 +9,7 @@ export default function tela_principal(){
              <title>IOT - Tela Principal</title>
         </Head>
         <div>
-            <NavbarPrincipal />
-            <DropMenu />
+        <NavbarPrincipal/>
         </div>
         </>
     )

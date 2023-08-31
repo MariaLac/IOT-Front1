@@ -1,20 +1,67 @@
 import Link from "next/link";
-import styles from '../../styles/NavbarPrincipal.module.css'
-import Button from "./button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserGear } from "@fortawesome/free-solid-svg-icons";
+import styles from '../../styles/NavbarPrincipal.module.css';
 
-export default function NavbarPrincipal(){
-    return(
+export default function NavbarPrincipal() {
+    return (
+
         <nav className={styles.navbar}>
-            <div>
-                <h1 className={styles.tex}>IOT</h1>
-            </div>
             <ul className={styles.link_items}>
-                <li>
+                <li className={`${styles.dropdown} ${styles.spaceRight}`}>
+                    <span>☰</span> {/* Ícone de três traços */}
+                    <ul className={styles.dropdownContent}>
+                       <li>
+                        <h2 className={styles.lh2}>Broker</h2>
+                       </li>
+
+                        <li>
+                            <Link href="/broker/cadastrar">
+                                Cadastrar
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/broker/listar">
+                                Listar
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/broker/detalhar">
+                                Detalhar
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/broker/editar">
+                                Editar
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/broker/remover">
+                                Remover
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/broker/testar">
+                                Testar
+                            </Link>
+                        </li>
+                    </ul>
+                </li>
+                <li className={`${styles.logo} ${styles.spaceL2}`}>
+                    <h1>IOT</h1>
+                </li>
+                <li className={styles.spaceLeft}>
                     <Link href="/">
                         Sair
                     </Link>
+                </li>
+                <li>
+                  <Link href="/broker/atualizarDados">
+                  <FontAwesomeIcon icon={faUserGear} style={{ color: "#ffffff" }} />
+                  </Link>
                 </li>
             </ul>
         </nav>
     )
 }
+
